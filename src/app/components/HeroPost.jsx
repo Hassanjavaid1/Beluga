@@ -39,6 +39,7 @@ const HeroPost = () => {
                 }
                 height={600}
                 width={628}
+                priority
                 alt="AI Future Illustration"
                 className="object-cover grow w-full min-h-[550px] h-[600px] rounded-2xl aspect-[1.06] max-md:mt-10 max-md:max-w-full"
               />

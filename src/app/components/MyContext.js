@@ -32,6 +32,10 @@ function MyContext({ children }) {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
+
   return (
     <contextApi.Provider
       value={{

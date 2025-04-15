@@ -32,6 +32,9 @@ function CategoryPills() {
     }, 1000);
   };
 
+  useEffect(()=>{
+    handlePill("Frontend")
+  },[])
   return (
     <>
       <div className="container w-[50%] mx-auto mt-14">

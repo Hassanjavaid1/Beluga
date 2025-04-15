@@ -44,7 +44,6 @@ function PopularPost() {
             dataLength={postsData.length} //This is important field to render the next data
             next={fetchData}
             hasMore={hasMore}
-
             loader={
               <div className="w-[10%] mt-4 m-auto">
                 <Lottie animationData={loadingAnimation} />

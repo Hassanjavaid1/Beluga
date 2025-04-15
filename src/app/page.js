@@ -10,28 +10,28 @@ const FeaturedPost = dynamic(() => import("./components/FeaturedPost"));
 const PopularPost = dynamic(() => import("./components/PopularPost"));
 const Newsletter = dynamic(() => import("./components/Newsletter"));
 
-export default function Home() {
+export default function Home({session}) {
   const { loading, categoryLoading } = useContext(contextApi);
 
   return (
     <>
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <HeroPost />
-          <CategoryPills />
-          {categoryLoading ? (
-            <Loader />
-          ) : (
-            <>
-              <FeaturedPost />
-              <PopularPost />
-            </>
-          )}
-          <Newsletter />
-        </>
-      )}
+        {loading ? (
+          <Loader />
+        ) : (
+          <>
+            <HeroPost />
+            <CategoryPills />
+            {categoryLoading ? (
+              <Loader />
+            ) : (
+              <>
+                <FeaturedPost />
+                <PopularPost />
+              </>
+            )}
+            <Newsletter />
+          </>
+        )}
     </>
   );
 }
