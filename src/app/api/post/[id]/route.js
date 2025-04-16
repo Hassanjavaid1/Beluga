@@ -13,7 +13,7 @@ export async function GET(req, { params }) {
             "image": mainImage.asset->url,
              }`;
 
-    const { id } = params;
+    const { id } = await params;
     const post = await client.fetch(query, { id });
     return NextResponse.json(post);
   } catch (err) {

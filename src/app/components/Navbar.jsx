@@ -14,7 +14,7 @@ function Navbar() {
                 alt="logo"
                 width={30}
                 height={20}
-                className="object-cover h-fit"
+                className="object-cover h-auto w-auto"
               />
               <h1 className="text-3xl font-semibold">Beluga</h1>
             </div>

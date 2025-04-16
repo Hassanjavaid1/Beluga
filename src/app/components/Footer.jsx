@@ -10,7 +10,7 @@ export default function Footer() {
             alt="logo"
             width={30}
             height={20}
-            className="object-cover h-fit"
+            className="object-cover h-fit w-auto"
           />
           <h1 className="text-3xl font-extrabold text-stone-950">Beluga</h1>
         </div>

@@ -5,8 +5,9 @@ import { contextApi } from "./MyContext";
 import Link from "next/link";
 import InfiniteScroll from "react-infinite-scroll-component";
 import loadingAnimation from "../../../public/loadingAnimation.json";
-import Lottie from "lottie-react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import dynamic from "next/dynamic";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import "../.././app/globals.css";
 
 function PopularPost() {
@@ -41,7 +42,7 @@ function PopularPost() {
           </h1>
         ) : (
           <InfiniteScroll
-            dataLength={postsData.length} //This is important field to render the next data
+            dataLength={postsData.length}
             next={fetchData}
             hasMore={hasMore}
             loader={
@@ -55,7 +56,7 @@ function PopularPost() {
               </p>
             }
           >
-            <TransitionGroup>
+            <TransitionGroup in={true}>
               <div className="my-8 flex items-baseline justify-between flex-wrap gap-4 gap-y-8">
                 {postsData.map(
                   ({
@@ -69,14 +70,12 @@ function PopularPost() {
                     <CSSTransition key={id} timeout={600} classNames="fade">
                       <div className="flex flex-col items-baseline gap-3 lg:min-w-[420px] lg:w-[420px] flex-1">
                         <Image
-                          src={
-                            image ||
-                            "https://cdn.builder.io/api/v1/image/assets/2971f33e3541497c855b8e4e5c5e46e4/5fd6140a276c0932771d3e9f94485aea8759ac78?placeholderIfAbsent=true"
-                          }
+                          src={image}
                           alt="card"
                           height={442}
                           width={410}
-                          className="object-cover w-full min-h-[442px] h-[442px] !max-h-[500px] rounded-2xl"
+                          loading="eager"
+                          className="object-cover w-auto min-h-[442px] h-auto max-h-[500px] rounded-2xl"
                         />
                         <div className="flex items-center gap-3 mt-4">
                           <span className="uppercase font-semibold">
