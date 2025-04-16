@@ -29,7 +29,7 @@ function Navbar() {
             />
             <span className="text-lg">Unknown</span>
             <button className="bg-[#7C4EE4] text-white font-semibold text-lg rounded-md cursor-pointer px-8 py-3">
-              Login
+              Logout
             </button>
           </div>
         </div>
