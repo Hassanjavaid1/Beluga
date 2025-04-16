@@ -23,7 +23,7 @@ function PopularPost() {
     }
 
     setItemCount((prev) => {
-      let newCount = prev + 1;
+      let newCount = prev + 3;
       setPostsData(popularPosts.slice(0, newCount));
       return newCount;
     });
