@@ -1,14 +1,25 @@
+"use client"
 import { signIn } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 function Navbar() {
+  const [isVisible, setIsVisible] = useState(false);
+  const hanldeToggle = () => {
+    if (isVisible) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  };
   return (
     <>
-      <header className="container mx-auto p-4">
-        <div className="flex items-center justify-between gap-3">
+      <header className="container mx-auto py-4 md:p-4">
+        <div className="flex items-center justify-between gap-3 px-3 relative">
           <Link href={"/"}>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 px-4">
               <Image
                 src={"/logo.png"}
                 alt="logo"
@@ -19,7 +30,9 @@ function Navbar() {
               <h1 className="text-3xl font-semibold">Beluga</h1>
             </div>
           </Link>
-          <div className="flex items-center gap-3">
+          <div
+            className={`${isVisible ? "flex" : "hidden"} items-center flex-col gap-3 absolute inset-0 top-12 py-2 bg-white h-fit`}
+          >
             <Image
               src={"/user.jpg"}
               alt="user"
@@ -32,6 +45,7 @@ function Navbar() {
               Logout
             </button>
           </div>
+          <RxHamburgerMenu onClick={hanldeToggle} className="text-3xl" />
         </div>
       </header>
     </>

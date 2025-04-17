@@ -8,7 +8,7 @@ const HeroPost = () => {
   const { heroPost } = useContext(contextApi);
   return (
     <article className="rounded-none">
-      <section className="flex flex-col justify-center items-center px-4 py-12 w-full bg-violet-600 max-md:px-5 max-md:py-24 max-md:max-w-full">
+      <section className="flex flex-col justify-center items-center w-full bg-violet-600 max-md:px-5 lg:max-md:py-24 max-md:max-w-full">
         <div className="mb-0 w-full max-w-[1296px] max-md:mb-2.5 max-md:max-w-full">
           <div className="flex items-center gap-5 max-md:flex-col">
             <div className="w-6/12 max-md:ml-0 max-md:w-full">
@@ -34,14 +34,12 @@ const HeroPost = () => {
             <div className="ml-5 w-6/12 max-md:ml-0 max-md:w-full">
               <Image
                 src={
-                  heroPost.image ||
-                  "https://cdn.builder.io/api/v1/image/assets/2971f33e3541497c855b8e4e5c5e46e4/f53f83bb0f23a02e70ad412353a5ab4162c55af7?placeholderIfAbsent=true"
-                }
+                  heroPost.image}
                 height={600}
                 width={628}
                 priority
                 alt="AI Future Illustration"
-                className="object-cover grow w-full min-h-[550px] h-[600px] rounded-2xl aspect-[1.06] max-md:mt-10 max-md:max-w-full"
+                className="object-cover grow w-full h-[360px] rounded-2xl aspect-[1.06] max-md:mt-10 max-md:max-w-full lg:h-[600px] lg:min-h-[550px]"
               />
             </div>
           </div>

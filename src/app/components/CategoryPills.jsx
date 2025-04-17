@@ -37,8 +37,8 @@ function CategoryPills() {
   },[])
   return (
     <>
-      <div className="container w-[50%] mx-auto mt-14">
-        <ul className="flex items-center justify-around gap-4 rounded-md bg-gray-200 p-2">
+      <div className="container w-full px-3 mx-auto mt-14 lg:w-[50%]">
+        <ul className="flex items-center justify-around gap-4 rounded-md bg-gray-200 p-2 whitespace-nowrap overflow-x-scroll">
           <li
             onClick={() => handlePill("Frontend")}
             className={`${activePill == "Frontend" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center`}
