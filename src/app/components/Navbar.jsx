@@ -16,7 +16,7 @@ function Navbar() {
   };
   return (
     <>
-      <header className="container mx-auto py-4 md:p-4 md:py-0">
+      <header className="container mx-auto py-4 md:p-4 md:py-2">
         <div className="flex items-center justify-between gap-3 px-3 relative">
           <Link href={"/"}>
             <div className="flex items-center gap-2 px-4">
