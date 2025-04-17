@@ -57,7 +57,7 @@ function PopularPost() {
             }
           >
             <TransitionGroup in={true}>
-              <div className="my-8 flex items-baseline justify-between flex-wrap gap-4 gap-y-8">
+              <div className="my-8 flex items-baseline justify-between flex-col flex-wrap gap-4 gap-y-8 lg:flex-row">
                 {postsData.map(
                   ({
                     id,
@@ -75,7 +75,7 @@ function PopularPost() {
                           height={442}
                           width={410}
                           loading="eager"
-                          className="object-cover w-auto min-h-[442px] h-auto max-h-[500px] rounded-2xl"
+                          className="object-cover w-auto h-auto min-h-[350px] max-h-[500px] rounded-2xl md:min-h-[442px]"
                         />
                         <div className="flex items-center gap-3 mt-4">
                           <span className="uppercase font-semibold">

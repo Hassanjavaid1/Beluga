@@ -38,34 +38,34 @@ function CategoryPills() {
   return (
     <>
       <div className="container w-full px-3 mx-auto mt-14 lg:w-[50%]">
-        <ul className="flex items-center justify-around gap-4 rounded-md bg-gray-200 p-2 whitespace-nowrap overflow-x-scroll">
+        <ul className="flex items-center justify-around gap-4 rounded-md bg-gray-200 p-2 whitespace-nowrap overflow-x-scroll scrollbar-none">
           <li
             onClick={() => handlePill("Frontend")}
-            className={`${activePill == "Frontend" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center`}
+            className={`${activePill == "Frontend" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center px-2`}
           >
             Frontend
           </li>
           <li
             onClick={() => handlePill("Backend")}
-            className={`${activePill == "Backend" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center`}
+            className={`${activePill == "Backend" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center px-2`}
           >
             Backend
           </li>
           <li
             onClick={() => handlePill("FullStack")}
-            className={`${activePill == "FullStack" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center`}
-          >
+            className={`${activePill == "FullStack" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center px-2`}
+          > 
             FullStack
           </li>
           <li
             onClick={() => handlePill("Cyber Security")}
-            className={`${activePill == "Cyber Security" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center`}
+            className={`${activePill == "Cyber Security" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center px-2`}
           >
             Cyber Security
           </li>
           <li
             onClick={() => handlePill("AI")}
-            className={`${activePill == "AI" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center`}
+            className={`${activePill == "AI" && "bg-white rounded-md py-1"} text-lg cursor-pointer w-full text-center px-2`}
           >
             AI
           </li>

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+
+.scrollbar-none::-webkit-scrollbar{
+  display: none;
+}
+
 /* styles.css */
 .fade-enter {
   opacity: 0;

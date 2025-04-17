@@ -2,8 +2,8 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <section className="flex flex-col pr-20 py-16  my-12 w-full bg-violet-600 max-md:pr-5 max-md:pb-24 max-md:mt-10 max-md:max-w-full">
-      <div className="flex flex-col items-center self-center mb-0 max-w-full w-[793px] z-40 max-md:mb-2.5">
+    <section className="flex flex-col py-8 my-12 w-full bg-violet-600 max-md:pr-5 max-md:mt-10 max-md:max-w-full md:pr-20 md:py-16 md:max-md:pb-24">
+      <div className="flex flex-col items-center self-center mb-0 max-w-full w-[793px] z-40 md:max-md:mb-2.5">
         <h2 className="self-stretch text-6xl font-bold tracking-wide text-center text-white max-md:max-w-full max-md:text-4xl">
           Get our stories delivered From us to your inbox weekly.
         </h2>
@@ -14,7 +14,7 @@ const Newsletter = () => {
           <input
             type="email"
             placeholder="Your Email"
-            className="grow shrink-0 px-6 py-5 text-lg bg-white rounded-lg bg-blend-normal basis-0 text-slate-500 outline-none w-fit max-md:px-5"
+            className="flex items-center gap-1 grow shrink-0 px-6 py-5 text-lg bg-white rounded-lg bg-blend-normal basis-0 text-slate-500 outline-none w-full max-md:px-5"
           />
           <button
             type="submit"

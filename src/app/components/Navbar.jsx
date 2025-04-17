@@ -16,7 +16,7 @@ function Navbar() {
   };
   return (
     <>
-      <header className="container mx-auto py-4 md:p-4">
+      <header className="container mx-auto py-4 md:p-4 md:py-0">
         <div className="flex items-center justify-between gap-3 px-3 relative">
           <Link href={"/"}>
             <div className="flex items-center gap-2 px-4">
@@ -31,7 +31,7 @@ function Navbar() {
             </div>
           </Link>
           <div
-            className={`${isVisible ? "flex" : "hidden"} items-center flex-col gap-3 absolute inset-0 top-12 py-2 bg-white h-fit`}
+            className={`${isVisible ? "flex" : "hidden"} items-center flex-col gap-3 absolute inset-0 top-12 py-2 bg-white h-fit md:flex md:flex-row md:static`}
           >
             <Image
               src={"/user.jpg"}
@@ -45,7 +45,7 @@ function Navbar() {
               Logout
             </button>
           </div>
-          <RxHamburgerMenu onClick={hanldeToggle} className="text-3xl" />
+          <RxHamburgerMenu onClick={hanldeToggle} className="text-3xl md:hidden" />
         </div>
       </header>
     </>
