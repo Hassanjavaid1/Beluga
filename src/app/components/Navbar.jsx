@@ -1,11 +1,13 @@
-"use client"
-import { signIn } from "next-auth/react";
+"use client";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 
 function Navbar() {
+  const { data: session } = useSession();
+
   const [isVisible, setIsVisible] = useState(false);
   const hanldeToggle = () => {
     if (isVisible) {
@@ -14,6 +16,7 @@ function Navbar() {
       setIsVisible(true);
     }
   };
+
   return (
     <>
       <header className="container mx-auto py-4 md:p-4 md:py-2">
@@ -34,18 +37,25 @@ function Navbar() {
             className={`${isVisible ? "flex" : "hidden"} items-center flex-col gap-3 absolute inset-0 top-12 py-2 bg-white h-fit md:flex md:flex-row md:static`}
           >
             <Image
-              src={"/user.jpg"}
+              src={session?.user?.image || "/user.jpg"}
               alt="user"
               width={50}
               height={50}
               className="w-[50px] h-[50px] rounded-full object-cover border border-gray-400"
             />
-            <span className="text-lg">Unknown</span>
-            <button className="bg-[#7C4EE4] text-white font-semibold text-lg rounded-md cursor-pointer px-8 py-3">
+            <span className="text-lg">{session?.user?.name || "Loading"}</span>
+
+            <button
+              onClick={() => signOut()}
+              className="bg-[#7C4EE4] text-white font-semibold text-lg rounded-md cursor-pointer px-8 py-3"
+            >
               Logout
             </button>
           </div>
-          <RxHamburgerMenu onClick={hanldeToggle} className="text-3xl md:hidden" />
+          <RxHamburgerMenu
+            onClick={hanldeToggle}
+            className="text-3xl md:hidden"
+          />
         </div>
       </header>
     </>
