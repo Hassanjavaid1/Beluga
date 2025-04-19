@@ -4,17 +4,17 @@ export async function middleware(request) {
   const path = request.nextUrl.pathname;
   const isPublicPath = path == "/api/auth/signin";
   const token =
-    (await request.cookies.get(
-      "next-auth.session-token" || "__Secure-next-auth.session-token"
-    )?.value) || "";
+    request.cookies.get("next-auth.session-token")?.value ||
+    request.cookies.get("__Secure-next-auth.session-token")?.value ||
+    "";
 
-  // if (isPublicPath && token) {
-  //   return NextResponse.redirect(new URL("/", request.url));
-  // }
+  if (isPublicPath && token) {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
 
-  // if (!isPublicPath && !token) {
-  //   return NextResponse.redirect(new URL("/api/auth/signin", request.url));
-  // }
+  if (!isPublicPath && !token) {
+    return NextResponse.redirect(new URL("/api/auth/signin", request.url));
+  }
 
   return NextResponse.next();
 }
