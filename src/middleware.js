@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import { getToken } from "next-auth/jwt";
 
 export async function middleware(request) {
   const path = request.nextUrl.pathname;
@@ -9,13 +8,13 @@ export async function middleware(request) {
       "next-auth.session-token" || "__Secure-next-auth.session-token"
     )?.value) || "";
 
-  if (isPublicPath && token) {
-    return NextResponse.redirect(new URL("/", request.url));
-  }
+  // if (isPublicPath && token) {
+  //   return NextResponse.redirect(new URL("/", request.url));
+  // }
 
-  if (!isPublicPath && !token) {
-    return NextResponse.redirect(new URL("/api/auth/signin", request.url));
-  }
+  // if (!isPublicPath && !token) {
+  //   return NextResponse.redirect(new URL("/api/auth/signin", request.url));
+  // }
 
   return NextResponse.next();
 }
