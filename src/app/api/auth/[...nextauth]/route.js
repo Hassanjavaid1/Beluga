@@ -13,12 +13,8 @@ const authHandler = NextAuth({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
     }),
-    // Passwordless / email sign in
-    // EmailProvider({
-    //   server: process.env.MAIL_SERVER,
-    //   from: "NextAuth.js <no-reply@example.com>",
-    // }),
   ],
+  secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { authHandler as GET, authHandler as POST };
