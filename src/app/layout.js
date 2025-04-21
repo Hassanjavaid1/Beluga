@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head></head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable} antialiased dark:bg-[#121212] dark:text-white`}
       >
         <SessionWrapper>
           <Navbar />

@@ -46,7 +46,7 @@ function page({ params }) {
     <article className="container mx-auto p-4">
       <div className="flex flex-col items-baseline">
         <header className="flex gap-4 items-center ml-28 text-sm max-md:ml-2.5">
-          <h2 className="grow font-bold text-zinc-800 text-lg">
+          <h2 className="grow font-bold text-zinc-800 dark:text-white text-lg">
             {post?.category}
           </h2>
           <time className="font-medium text-neutral-400">
@@ -54,7 +54,7 @@ function page({ params }) {
           </time>
         </header>
 
-        <h1 className="mt-5 mx-auto text-5xl font-bold leading-[67px] text-zinc-800 max-md:mr-2.5 max-md:text-4xl max-md:leading-[60px] lg:w-[86%]">
+        <h1 className="mt-5 mx-auto text-5xl font-bold leading-[67px] text-zinc-800 dark:text-white max-md:mr-2.5 max-md:text-4xl max-md:leading-[60px] lg:w-[86%]">
           {post?.title}
         </h1>
 
@@ -67,7 +67,7 @@ function page({ params }) {
           className="object-cover mt-14 rounded-2xl h-auto w-auto min-w-full mx-auto"
         />
 
-        <p className="my-10  mx-auto text-lg leading-loose text-stone-500 whitespace-pre-line lg:w-[86%]">
+        <p className="my-10  mx-auto text-lg leading-loose text-stone-500 dark:text-stone-300 whitespace-pre-line lg:w-[86%]">
           {post.description}
         </p>
       </div>

@@ -7,8 +7,8 @@ import Link from "next/link";
 const HeroPost = () => {
   const { heroPost } = useContext(contextApi);
   return (
-    <article className="rounded-none">
-      <section className="flex flex-col justify-center items-center w-full bg-violet-600 max-lg:px-5 lg:py-24 max-lg:max-w-full">
+    <article className=" rounded-none">
+      <section className="flex flex-col justify-center items-center w-full bg-violet-600 dark:bg-[#121212] dark:text-white max-lg:px-5 lg:py-24 max-lg:max-w-full">
         <div className="mb-0 w-full max-w-[1296px] max-lg:mb-2.5 max-lg:max-w-full">
           <div className="flex flex-col items-center gap-5 lg:flex-row">
             <div className="w-6/12 max-lg:ml-0 max-lg:w-full">

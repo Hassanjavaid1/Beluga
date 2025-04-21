@@ -19,9 +19,9 @@ const FeaturedPost = () => {
             className="object-cover absolute inset-0 size-full rounded-2xl"
           />
           <div className="box-border flex relative flex-col shrink-0">
-            <article className="flex relative z-10 flex-col items-start mb-0 w-full max-w-full p-4 bg-white rounded-2xl max-lg:px-5 max-lg:mb-2.5 lg:w-[966px] lg:py-10 lg:pr-20 lg:pl-9">
+            <article className="flex relative z-10 flex-col items-start mb-0 w-full max-w-full p-4 bg-white dark:bg-[#1c1c1d] rounded-2xl max-lg:px-5 max-lg:mb-2.5 lg:w-[966px] lg:py-10 lg:pr-20 lg:pl-9">
               <header className="flex gap-2 text-sm">
-                <h2 className="grow font-bold text-zinc-800">
+                <h2 className="grow font-bold text-zinc-800 dark:text-white">
                   {featuredPost.category}
                 </h2>
                 <time className="font-medium text-neutral-400">
@@ -29,11 +29,11 @@ const FeaturedPost = () => {
                 </time>
               </header>
 
-              <h1 className="mt-2 text-4xl font-bold tracking-tighter leading-10 text-zinc-800 max-lg:max-w-full md:mt-7">
+              <h1 className="mt-2 text-4xl font-bold tracking-tighter leading-10 text-zinc-800 dark:text-white max-lg:max-w-full md:mt-7">
                 {featuredPost?.title}
               </h1>
 
-              <p className="self-stretch mt-5 text-lg leading-6 hidden text-stone-500 max-lg:max-w-full lg:block">
+              <p className="self-stretch mt-5 text-lg leading-6 hidden text-stone-500 dark:text-stone-300 max-lg:max-w-full lg:block">
                 {featuredPost?.description?.slice(0, 400)}...
               </p>
 

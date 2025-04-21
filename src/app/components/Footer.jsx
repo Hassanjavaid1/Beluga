@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="container mx-auto p-4">
       <div className="flex flex-col items-center">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 ">
           <Image
             src={"/logo.png"}
             alt="logo"
@@ -12,7 +12,9 @@ export default function Footer() {
             height={20}
             className="object-cover h-fit w-auto"
           />
-          <h1 className="text-3xl font-extrabold text-stone-950">Beluga</h1>
+          <h1 className="text-3xl font-extrabold text-stone-950 dark:text-white">
+            Beluga
+          </h1>
         </div>
         <nav className="flex gap-4 my-10 text-lg font-bold text-white max-md:mt-10">
           <a
@@ -37,7 +39,7 @@ export default function Footer() {
           alt="Decorative line"
           className="object-contain self-center mt-10 w-full aspect-[1000] max-w-[1294px] max-md:mt-10 max-md:max-w-full"
         />
-        <p className="self-center my-6 ml-8 text-lg text-stone-950 max-md:mt-10">
+        <p className="self-center my-6 ml-8 text-lg text-stone-950 dark:text-white max-md:mt-10">
           Copyright Beluga Inc © 2025. All Right Reserved
         </p>
       </div>

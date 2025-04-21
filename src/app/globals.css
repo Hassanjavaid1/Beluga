@@ -1,20 +1,7 @@
 @import "tailwindcss";
+@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
 
-
-.scrollbar-none::-webkit-scrollbar{
+.scrollbar-none::-webkit-scrollbar {
   display: none;
-}
-
-/* styles.css */
-.fade-enter {
-  opacity: 0;
-  transform: translateY(10px);
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition:
-    opacity 600ms ease-out,
-    transform 600ms ease-out;
 }
